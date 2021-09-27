@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class InputController : MonoBehaviour
+public class InputController : MonoBehaviour, IPointerDownHandler
 {
     private AnimationController animationController;    //youtube.com/watch?v=BMAkGJ1vfY0 27:31
     private GameplayController gameplayController;
 
-    private string playersChoice;
+    //private string playersChoice;
 
     void Awake()
     {
@@ -16,11 +17,11 @@ public class InputController : MonoBehaviour
         gameplayController = GetComponent<GameplayController>();
     }
 
-    public void GetChoice()
+   /* public void GetChoice()
     {
-        string choiceName = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObjekt.name;
+        //string choiceName = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObjekt.name;
 
-        GameChoices selectedChoice = GameChoices.NONE;
+        //GameChoices selectedChoice = GameChoices.NONE;
 
         switch (choiceName)
         {
@@ -55,6 +56,10 @@ public class InputController : MonoBehaviour
         gameplayController.SelectedChoice(selectedChoice);
         animationController.PlayerMadeChoice();
     }
+    */
 
-
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        Debug.Log("OnPointerDown");
+    }
 }

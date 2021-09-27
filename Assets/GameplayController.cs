@@ -25,7 +25,7 @@ public class GameplayController : MonoBehaviour
     [SerializeField]
     private Text infoText;
 
-    private GameChoices player_Choice = GameChoices.NONE, opponent_Choice = GameChoices.NONE;
+    //private GameChoices player_Choice = GameChoices.NONE, opponent_Choice = GameChoices.NONE;
 
     private AnimationController animationController;
     
