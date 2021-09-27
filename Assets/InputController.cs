@@ -53,7 +53,7 @@ public class InputController : MonoBehaviour
                 selectedChoice = GameChoices.SPONGE;
                 break;
         }
-        gameplayController.SelectedChoice(selectedChoice);
+        gameplayController.SetChoices(selectedChoice);
         animationController.PlayerMadeChoice();
     }
 
