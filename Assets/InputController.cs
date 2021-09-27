@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class InputController : MonoBehaviour, IPointerDownHandler
+public class InputController : MonoBehaviour
 {
     private AnimationController animationController;    //youtube.com/watch?v=BMAkGJ1vfY0 27:31
     private GameplayController gameplayController;
@@ -57,9 +57,4 @@ public class InputController : MonoBehaviour, IPointerDownHandler
         animationController.PlayerMadeChoice();
     }
 
-
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        Debug.Log("OnPointerDown");
-    }
 }
