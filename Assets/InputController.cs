@@ -9,7 +9,7 @@ public class InputController : MonoBehaviour, IPointerDownHandler
     private AnimationController animationController;    //youtube.com/watch?v=BMAkGJ1vfY0 27:31
     private GameplayController gameplayController;
 
-    //private string playersChoice;
+    private string playersChoice;
 
     void Awake()
     {
@@ -17,11 +17,11 @@ public class InputController : MonoBehaviour, IPointerDownHandler
         gameplayController = GetComponent<GameplayController>();
     }
 
-   /* public void GetChoice()
+    public void GetChoice()
     {
-        //string choiceName = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObjekt.name;
+        string choiceName = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name;
 
-        //GameChoices selectedChoice = GameChoices.NONE;
+        GameChoices selectedChoice = GameChoices.NONE;
 
         switch (choiceName)
         {
@@ -56,7 +56,7 @@ public class InputController : MonoBehaviour, IPointerDownHandler
         gameplayController.SelectedChoice(selectedChoice);
         animationController.PlayerMadeChoice();
     }
-    */
+
 
     public void OnPointerDown(PointerEventData eventData)
     {
