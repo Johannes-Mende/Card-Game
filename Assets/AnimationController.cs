@@ -7,7 +7,7 @@ public class AnimationController : MonoBehaviour
     //public bool PlayerWinbool;
 
     [SerializeField]
-    private Animator playerChoiceHanlderAnimation, choiceAnimation, /*PlayerWin, PlayerLose*/;
+    private Animator playerChoiceHanlderAnimation, choiceAnimation /*PlayerWin, PlayerLose*/;
 
     public void ResetAnimations()
     {
