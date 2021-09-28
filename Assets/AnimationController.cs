@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class AnimationController : MonoBehaviour
 {
+    //public bool PlayerWinbool;
 
     [SerializeField]
-    private Animator playerChoiceHanlderAnimation, choiceAnimation;
+    private Animator playerChoiceHanlderAnimation, choiceAnimation, /*PlayerWin, PlayerLose*/;
 
     public void ResetAnimations()
     {
@@ -17,5 +18,14 @@ public class AnimationController : MonoBehaviour
     {
         playerChoiceHanlderAnimation.Play("RemoveHandler");
         choiceAnimation.Play("ShowChoices");
+        /*
+        if(!PlayerWinbool)
+        {
+            PlayerLose.Play("PlayerLose");
+        }
+        else if(PlayerWinbool)
+        {
+            PlayerWin.Play("PlayerWin");
+        }*/
     }
 }

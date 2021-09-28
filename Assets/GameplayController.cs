@@ -129,7 +129,14 @@ public class GameplayController : MonoBehaviour
 
         #region RockWin
              
-        if(player_Choice == GameChoices.ROCK && opponent_Choice == GameChoices.PAPER)
+        if(player_Choice == GameChoices.ROCK && opponent_Choice == GameChoices.FIRE)
+        {
+            infoText.text = "You Win!";
+            StartCoroutine(DisplayWinnerAndRestart());
+            return;
+        }
+
+        if(player_Choice == GameChoices.ROCK && opponent_Choice == GameChoices.SCISSORS)
         {
             infoText.text = "You Win!";
             StartCoroutine(DisplayWinnerAndRestart());
@@ -137,13 +144,6 @@ public class GameplayController : MonoBehaviour
         }
 
         if(player_Choice == GameChoices.ROCK && opponent_Choice == GameChoices.SPONGE)
-        {
-            infoText.text = "You Win!";
-            StartCoroutine(DisplayWinnerAndRestart());
-            return;
-        }
-
-        if(player_Choice == GameChoices.ROCK && opponent_Choice == GameChoices.FIRE)
         {
             infoText.text = "You Win!";
             StartCoroutine(DisplayWinnerAndRestart());
@@ -340,7 +340,7 @@ public class GameplayController : MonoBehaviour
         }
         #endregion
 
-        #region Scissors
+        #region ScissorsLose
         if(player_Choice == GameChoices.SCISSORS && opponent_Choice == GameChoices.FIRE)
         {
             infoText.text = "You Lose!";
