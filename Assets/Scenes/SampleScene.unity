@@ -1329,8 +1329,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 978335871f506b84f993220b6ae6562c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerWinbool: 0
   playerChoiceHanlderAnimation: {fileID: 645202704}
   choiceAnimation: {fileID: 1925483976}
+  PlayerWinAnimation: {fileID: 1707279768}
+  PlayerLoseAnimation: {fileID: 1775853933}
 --- !u!4 &1108971859
 Transform:
   m_ObjectHideFlags: 0
@@ -2056,7 +2059,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1707279767}
-  - component: {fileID: 1707279769}
   - component: {fileID: 1707279768}
   m_Layer: 5
   m_Name: PlayerWinHolder
@@ -2105,18 +2107,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!225 &1707279769
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1707279766}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &1775853931
 GameObject:
   m_ObjectHideFlags: 0

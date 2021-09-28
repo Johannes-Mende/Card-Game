@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class AnimationController : MonoBehaviour
 {
-    //public bool PlayerWinbool;
+    public bool PlayerWinbool;
 
     [SerializeField]
-    private Animator playerChoiceHanlderAnimation, choiceAnimation /*PlayerWin, PlayerLose*/;
+    private Animator playerChoiceHanlderAnimation, choiceAnimation, PlayerWinAnimation, PlayerLoseAnimation;
 
     public void ResetAnimations()
     {
@@ -28,4 +28,14 @@ public class AnimationController : MonoBehaviour
             PlayerWin.Play("PlayerWin");
         }*/
     }
+
+    public void PlayerWin()
+    {
+        PlayerWinAnimation.Play("AngriffWin");
+    }
+    public void PlayerLose()
+    {
+        PlayerLoseAnimation.Play("AngriffLose");
+    }
 }
+

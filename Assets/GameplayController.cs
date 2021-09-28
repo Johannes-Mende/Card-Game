@@ -53,7 +53,7 @@ public class GameplayController : MonoBehaviour
                 player_Choice = GameChoices.SCISSORS;
                 break;
 
-            case GameChoices.FIRE:
+            case GameChoices.FIRE:                                  //Fire Water Air und Sponge funktionieren nicht
                 player_Choice_Img.sprite = fire_Sprite;
                 player_Choice = GameChoices.FIRE;
                 break;
@@ -94,23 +94,23 @@ public class GameplayController : MonoBehaviour
                 opponent_Choice = GameChoices.PAPER;
                 opponent_Choice_Img.sprite = paper_Sprite;
                 break;
-            case 3:
+            case 2:
                 opponent_Choice = GameChoices.SCISSORS;
                 opponent_Choice_Img.sprite = scissors_Sprite;
                 break;
-            case 4:
+            case 3:
                 opponent_Choice = GameChoices.FIRE;
                 opponent_Choice_Img.sprite = fire_Sprite;
                 break;
-            case 5:
+            case 4:
                 opponent_Choice = GameChoices.WATER;
                 opponent_Choice_Img.sprite = water_Sprite;
                 break;
-            case 6:
+            case 5:
                 opponent_Choice = GameChoices.AIR;
                 opponent_Choice_Img.sprite = air_Sprite;
                 break;
-            case 7:
+            case 6:
                 opponent_Choice = GameChoices.SPONGE;
                 opponent_Choice_Img.sprite = sponge_Sprite;
                 break;
@@ -451,6 +451,16 @@ public class GameplayController : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         infoText.gameObject.SetActive(true);
+
+        if(infoText.text == ("You Win!"))
+        {
+           animationController.PlayerWin();
+        }
+
+        if(infoText.text == ("You Lose!"))
+        {
+            animationController.PlayerLose();
+        }
 
         yield return new WaitForSeconds(2f);
         infoText.gameObject.SetActive(false);
