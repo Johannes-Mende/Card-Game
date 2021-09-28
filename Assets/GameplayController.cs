@@ -88,7 +88,6 @@ public class GameplayController : MonoBehaviour
             case 0:
                 opponent_Choice = GameChoices.ROCK;
                 opponent_Choice_Img.sprite = rock_Sprite;
-                
                 break;
             case 1:
                 opponent_Choice = GameChoices.PAPER;

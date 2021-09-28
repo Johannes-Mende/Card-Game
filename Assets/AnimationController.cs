@@ -18,15 +18,6 @@ public class AnimationController : MonoBehaviour
     {
         playerChoiceHanlderAnimation.Play("RemoveHandler");
         choiceAnimation.Play("ShowChoices");
-        /*
-        if(!PlayerWinbool)
-        {
-            PlayerLose.Play("PlayerLose");
-        }
-        else if(PlayerWinbool)
-        {
-            PlayerWin.Play("PlayerWin");
-        }*/
     }
 
     public void PlayerWin()
